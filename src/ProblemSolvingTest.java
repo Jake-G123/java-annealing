@@ -87,7 +87,7 @@ public class ProblemSolvingTest {
   // Come up with more tests to thoroughly test hasEmptyString
   // Use your creativity here!
   @Test
-  void testHasEmptyString_EntireEmpty() {
+  void testHasEmptyString_isEmptySet() {
     // arrange
     Set<String> input = Set.of();
     // act
@@ -112,7 +112,7 @@ public class ProblemSolvingTest {
   // Come up with more tests to thoroughly test maxLength
   // Use your creativity here!
   @Test
-  void testMaxLength_EmptySet() {
+  void testMaxLength_isEmptySet() {
     // arrange
     Set<String> input = Set.of();
     // act
@@ -155,13 +155,13 @@ public class ProblemSolvingTest {
     assertEquals(0, actual);
   }
   @Test
-  void testMinLength_isEmpty() {
+  void testMinLength_isEmptySet() {
     // arrange
-    Set<String> input = Set.of("");
+    Set<String> input = Set.of();
     // act
     int actual = ProblemSolving.minLength(input);
     // assert
-    assertEquals(0, actual);
+    assertEquals(Integer.MAX_VALUE, actual);
   }
 
 }
