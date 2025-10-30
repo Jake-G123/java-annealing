@@ -55,7 +55,17 @@ public class ProblemSolving {
    * @return the maximum length of a word in the set
    */
   public static int maxLength(Set<String> words) {
-    return 0;
+    if (words.isEmpty()) {
+      return 0;
+    }
+    int maxNum = 0;
+    for (String word : words) {
+      int current = word.length();
+      if (current > maxNum) {
+        maxNum = current;
+      }
+    }
+    return maxNum;
   }
 
  /**
